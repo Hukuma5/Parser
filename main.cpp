@@ -28,7 +28,7 @@ int main() {
   }
 
   try {
-    if (students.size() != data["_meta"]["count"].get<int>()) {
+    if (students.size() != data["_meta"]["count"].get<size_t>()) {
       throw std::runtime_error{"_meta.count != len(items)"};
     }
   } catch (const std::runtime_error& e) {
